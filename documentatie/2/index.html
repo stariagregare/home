@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>
+      Physics.
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          $("body").fadeIn(0);
+          $("a.transition").click(function(event) {
+              event.preventDefault();
+              linkLocation = this.href;
+              $("body").fadeOut(0, redirectPage);
+          });
+          function redirectPage() {
+              window.location = linkLocation;
+          }
+      });
+      $(window).on('beforeunload', function() {
+          $(window).scrollTop(0);
+      });
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 200);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href='#1'>
+      <div class='black' id='header'>
+        Physics.
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+    <a href='#2'>
+      <div class='white' id='1'>
+        <div class='title'>
+          Vaporizarea și condensarea
+        </div>
+        <div class='post'>
+          Trecerea unei substante din stare lichidă în stare de vapori (gazoasă) se numește vaporizare.
+          <br><br>
+          Fierberea este vaporizarea care are loc în toată masa lichidului. Evaporarea este vaporizarea care are loc doar la suprafața lichidului.
+        </div>
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+    <a href='#3'>
+      <div class='black' id='2'>
+        <div class='title'>
+        Factori ce influenteaza evaporarea:
+        </div>
+        <div class='post'><br>
+
+             natura substanței; substanțe ca acetona, eterul, benzina etc. se evaporă foarte repede și se numesc de aceea volatile. Evaporarea se produce cu absorbție de căldură.<br><br>
+          suprafața de întindere: cu cât este mai mare, evaporarea are loc mai repede.<br><br>
+          agitația aerului din jurul corpului sau substanței (vântul) grăbește evaporarea.<br><br>
+
+        </div>
+
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+
+
+  </body>
+</html>

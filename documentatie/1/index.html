@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>
+      Physics.
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          $("body").fadeIn(0);
+          $("a.transition").click(function(event) {
+              event.preventDefault();
+              linkLocation = this.href;
+              $("body").fadeOut(0, redirectPage);
+          });
+          function redirectPage() {
+              window.location = linkLocation;
+          }
+      });
+      $(window).on('beforeunload', function() {
+          $(window).scrollTop(0);
+      });
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 200);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href='#1'>
+      <div class='black' id='header'>
+        Physics.
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+    <a href='#2'>
+      <div class='white' id='1'>
+        <div class='title'>
+          Topirea si solidificarea
+        </div>
+        <div class='post'>
+          Trecerea unei substante din stare solida în lichida se numeste topire. Solidificarea este fenomenul invers topirii și consta în trecerea unei substante din stare lichidă în cea solida.
+          <br><br>
+          In general, topirea are loc prin absorbție de caldura (ancalzire), iar solidificarea are loc prin cedare de caldură (răcire).
+        </div>
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+    <a href='#3'>
+      <div class='black' id='2'>
+        <div class='title'>
+        Legile topirii și solidificării:
+        </div>
+        <div class='post'><br>
+
+              Temperatura de topire rămâne constantă, dacă presiunea ramâne constantă. La fel și pentru solidificare;<br><br>
+          Temperatura de topire coincide cu cea de solidificare;<br><br>
+          În timpul topirii (respectiv a solidificării) volumul substanței se modifica.
+        </div>
+
+      </div>
+    </a>
+  <!------------------------------------------------------------>
+    <a href='#4'>
+      <div class='white' id='3'>
+        <div class='title'>
+         Alte aspecte legate de starea de agregare
+        </div>
+        <div class='post'>
+            Aliajele sunt amestecuri omogene de două sau mai multe metale. Temperatura de topire a aliajului este mai mică decât temperatura de topire a fiecarui component al său.<Br><br>
+            Masa unui corp nu se modifică în timpul topirii sau al solidificării.
+        </div>
+
+      </div>
+    </a>
+
+  </body>
+</html>

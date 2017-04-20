@@ -1,0 +1,98 @@
+
+/* general stuff */
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src: url('../fonts/Raleway-ExtraLight.ttf');
+}
+
+body {
+  font-family: 'Raleway-ExtraLight';
+  background: #131313;
+  margin: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #2C2416;
+}
+
+/* define the white and black */
+
+.black {
+  height: 100vh;
+  width: 100%;
+
+  background: #131313;
+  color: #fff;
+}
+
+.white {
+  height: 100vh;
+  width: 100%;
+
+  background: #fff;
+  color: #131313;
+}
+
+/* define the header - Tile. */
+
+#header {
+  text-align: center;
+  font-size: 200px;
+  line-height: 95vh;
+}
+
+/***********************************************/
+
+/* define the title of a post */
+
+.title {
+  padding-top: 10vh;
+  padding-bottom: 8vh;
+
+  font-size: 100px;
+  text-align: center;
+}
+
+/* define the date */
+
+.date {
+  font-size: 30px;
+  float: right;
+}
+
+/* define a normal post */
+
+.post { 
+  margin-left: 20vh;
+  margin-right: 20vh;
+
+  font-size: 50px;
+  text-align: center;
+}
+
+/* define a left-right post */
+
+.post-left {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  padding-left: 15%;
+  padding-right: 5%;
+  font-size: 40px;
+  text-align: center;
+}
+.post-right {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  padding-left: 5%;
+  padding-right: 15%;
+  font-size: 40px;
+  text-align: center;
+}
